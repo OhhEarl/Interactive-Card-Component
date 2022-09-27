@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card Details Form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <img src="images/bg-main-desktop.png"   id="background" alt="bg-main-desktop">
+    
+        
+        <img src="images/bg-card-front.png" alt="bg-card-front" id="cardFront">
+        <div id="span"></div>
+        <div id="span1"></div>
+        <span id="card-number">0000 0000 0000 0000</span>
+        <span id="card-name">JANE APPLESEED</span>
+        <span id="card-month">00</span>
+        <span id="card-divider">/</span>
+        <span id="card-year">00</span>
+       
+
+        <img src="images/bg-card-back.png" alt="bg-card-back" id="cardBack">
+        <span id="card-cvc">000</span>
+
+        <form id="form"  method="GET">
+        <div class="container-group">
+            <div class="group-input">
+                <p>CARDHOLDER NAME</p>
+                <input type="text" placeholder="e.g Jane Applessed" id="name">
+            </div>
+            <div class="group-input">
+                <p>CARD NUMBER</p>
+                <input type="text" placeholder="e.g 1234 5678 9123 0000" class="cardNumber" id="cardNumber">
+                <span id="number-error"></span>
+            </div>
+            <div class="group-input mm-yy">
+                <p>EXP. DATE (MM/YY)</p>
+                <input type="number" placeholder="MM" id="month" min="1" max="12">
+                <input type="number" placeholder="YY" id="year" min="00" max="99">
+                <span id="date-format"></span>
+            </div>
+
+            <div class="group-input" id="last">
+                <p>CVC</p>
+                <input type="number" placeholder="e.g 123"id="cvc" min="000" max="999">
+                <span id="cvc-format"></span>
+            </div>
+
+            <button type="submit" id="btn">Confirm</button>
+        </div>
+        </form>
+
+
+        <div id="thank-you">
+            <img src="images/icon-complete.svg" alt="">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button id="btn2">Continue</button>
+        </div>
+    </div>
+   
+  <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js">
+  </script>
+   <script defer src="script.js"></script>
+</body>
+</html>
